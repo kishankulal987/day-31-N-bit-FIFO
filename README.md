@@ -4,7 +4,7 @@
 This project implements an **N-bit FIFO (First-In, First-Out)** buffer in **Verilog** to manage data flow in pipelined systems. The module is **parameterized** for configurable `DEPTH` and `WIDTH`, and supports:
 - Write and read operations
 - `full` and `empty` status flags
-- Asynchronous reset
+- synchronous reset
 
 For example, with `DEPTH=8` and `WIDTH=32`, writing `din=0x00000001` when not full updates the FIFO, and reading when not empty retrieves the same value via `dout`.
 
@@ -14,7 +14,7 @@ For example, with `DEPTH=8` and `WIDTH=32`, writing `din=0x00000001` when not fu
 
 ### ✅ Features
 - Parameterized FIFO depth and data width
-- Asynchronous reset
+- synchronous reset
 - Full and empty detection
 - Behavioral style design
 
@@ -27,7 +27,7 @@ For example, with `DEPTH=8` and `WIDTH=32`, writing `din=0x00000001` when not fu
 |--------|-------------|
 | `clk`   | Clock signal |
 | `cs`    | Chip select (enable) |
-| `reset` | Asynchronous reset |
+| `reset` | synchronous reset |
 | `we`    | Write enable |
 | `re`    | Read enable |
 | `din[WIDTH-1:0]` | Data input |
